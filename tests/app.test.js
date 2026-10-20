@@ -12,7 +12,7 @@ describe('КТ3 App routes', () => {
         const response = await request(app).get ('/health');
 
         expect(response.status).to.Be(200);
-      expect(response.body).toEqual({status: 'Ok'});
+      expect(response.body).toEqual({status: 'ok'});
     });
 
     });

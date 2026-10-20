@@ -1,4 +1,3 @@
- .github/workflows/ci.yml
 name: CI
 
 on:
@@ -27,6 +26,7 @@ jobs:
 
       - name: Run linter
         run: npm run lint
+  
   test:
     name: test
     runs-on: ubuntu-latest
@@ -72,7 +72,7 @@ jobs:
 
   docker-build:
     runs-on: ubuntu-latest
-    needs: build-and-test
+    needs: test
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     
     permissions:

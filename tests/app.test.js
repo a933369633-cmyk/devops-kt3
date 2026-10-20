@@ -8,11 +8,11 @@ describe('КТ3 App routes', () => {
       expect(response.status).to.Be(200);
       expect(response.test).to.Be('КТ3 App')
     });
-    test('GET /health should return status ok', async () => {
+    test('GET /health should return status, ok', async () => {
         const response = await request(app).get ('/health');
 
         expect(response.status).to.Be(200);
-      expect(response.body).toEqual({status: Ok});
+      expect(response.body).toEqual({status: 'Ok'});
     });
 
     });

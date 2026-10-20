@@ -1,4 +1,4 @@
-const requere = require('supertest');
+const request = require('supertest');
 const app = require('../src/app');
 const { describe, test } = require('node:test');
 const { request } = require('node:http');
@@ -14,7 +14,7 @@ describe('КТ3 App routes', () => {
     test('GET /health should return status ok', async () => {
         const response = await request(app).get ('/health');
 
-        xpect(response.status).to.Be(200);
+        expect(response.status).to.Be(200);
       expect(response.body).toEqual({status: ok});
     });
 

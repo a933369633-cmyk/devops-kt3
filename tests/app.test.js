@@ -1,8 +1,5 @@
 const request = require('supertest');
 const app = require('../src/app');
-const { describe, test } = require('node:test');
-const { request } = require('node:http');
-const { ok } = require('node:assert');
 
 describe('КТ3 App routes', () => {
     test('GET/ should return "КТ3 App"',  async () => {

@@ -6,7 +6,7 @@ describe('КТ3 App routes', () => {
       const response = await request(app).get ('/');
      
       expect(response.status).toBe(200);
-      expect(response.test).toBe('КТ3 App')
+      expect(response.text).toBe('КТ3 App')
     });
     test('GET /health should return status, ok', async () => {
         const response = await request(app).get ('/health');

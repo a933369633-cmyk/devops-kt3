@@ -1,8 +1,8 @@
-From node:20-alpine
+FROM node:20-alpine
 
 WORKDIR /app
 
-COPY packege*json ./
+COPY package*.json ./
 RUN npm ci --omit=dev
 
 COPY src/ ./src/
